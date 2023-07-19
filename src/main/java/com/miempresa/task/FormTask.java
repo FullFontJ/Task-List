@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package com.miempresa.task;
 
 import java.util.List;
@@ -9,7 +5,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author asus
+ * @author fullfontJ
  */
 public class FormTask extends javax.swing.JPanel {
     private Task frame;
@@ -41,7 +37,7 @@ public class FormTask extends javax.swing.JPanel {
         textDescripcion = new javax.swing.JTextArea();
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Agregar Tarea");
+        jLabel1.setText("AGREGAR TAREA");
 
         jButton1.setText("AGREGAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +98,8 @@ public class FormTask extends javax.swing.JPanel {
                 .addComponent(jButton1)
                 .addGap(91, 91, 91))
         );
+
+        jLabel1.getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

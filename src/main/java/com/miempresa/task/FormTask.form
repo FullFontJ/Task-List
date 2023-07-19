@@ -76,8 +76,11 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Agregar Tarea"/>
+        <Property name="text" type="java.lang.String" value="AGREGAR TAREA"/>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>

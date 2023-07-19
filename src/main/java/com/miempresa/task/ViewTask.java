@@ -1,28 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package com.miempresa.task;
 
-import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Image;
 import java.io.File;
 import java.util.List;
-import java.util.ArrayList;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 /**
  *
- * @author asus
+ * @author fullfontJ
  */
 public class ViewTask extends javax.swing.JPanel {
     List<ListTask> tasks = DataTask.obtenerUsuarios();
@@ -34,7 +26,7 @@ public class ViewTask extends javax.swing.JPanel {
         initComponents();
 //        BajarEstadoTask.setIcon(setIcono("/src/main/java/com/miempresa/task/image/flecha-izquierda.png",35));
 //        SubirEstadoTask.setIcon(setIcono("/src/main/java/com/miempresa/task/image/flecha-derecha.png",35));
-        ActualizarData();
+        
     }
 
     /**
@@ -297,6 +289,10 @@ public class ViewTask extends javax.swing.JPanel {
         }
         }
     
+    }
+    
+     public void reload() {
+         ActualizarData();
     }
     
    private void estadoTaskEdit(java.awt.event.ActionEvent evt, boolean subir) {                                                

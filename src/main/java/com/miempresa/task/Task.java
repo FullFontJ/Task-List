@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.miempresa.task;
 
 import java.awt.BorderLayout;
@@ -9,7 +5,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author asus
+ * @author fullfontJ
  */
 public class Task extends javax.swing.JFrame {
 
@@ -19,14 +15,6 @@ public class Task extends javax.swing.JFrame {
         initComponents();
             
         cambiarPanel(panel1);
-//        
-//        vista.setSize(content.getSize());
-//        vista.setLocation(0,0);
-        
-//        content.removeAll();
-//        content.add(vista, BorderLayout.CENTER);
-//        content.revalidate();
-//        content.repaint();
     }
 
     /**
@@ -46,6 +34,8 @@ public class Task extends javax.swing.JFrame {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setResizable(false);
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
@@ -107,10 +97,7 @@ public class Task extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        DataTask.agregarUsuario(new ListTask(1, "Inicializar 1", "Redatar documento con todos los requerimientos Redatar documento con todos los requerimientos", 1));
-    DataTask.agregarUsuario(new ListTask(2, "Inicializar Requerimientos", "Redatar documento con todos los requerimientos", 2));
-    DataTask.agregarUsuario(new ListTask(3, "Inicializar Requerimientos", "Redatar documento con todos los requerimientos", 1));
-    DataTask.agregarUsuario(new ListTask(4, "Inicializar Requerimientos", "Redatar documento con todos los requerimientos", 3));
+    DataTask.agregarUsuario(new ListTask(1, "Inicializar Requerimientos", "Redatar documento con todos los requerimientos", 1));
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -143,6 +130,9 @@ public class Task extends javax.swing.JFrame {
      public void cambiarPanel(JPanel nuevoPanel) {
         nuevoPanel.setSize(content.getSize());
         nuevoPanel.setLocation(0,0);
+        if (nuevoPanel instanceof ViewTask) {
+            panel1.reload(); // Recarga el contenido del Panel1
+        }
         content.removeAll();
         content.add(nuevoPanel, BorderLayout.CENTER);
         content.revalidate();
